@@ -66,18 +66,19 @@ body {
 
 section {
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding-top: 8rem;
+    padding-bottom: 2rem;
 }
 
 .home {
     display: flex;
     align-items: center;
-    padding: 0 9%;
     position: relative;
 }
 
 .home-content {
     max-width: 60rem;
+    margin-bottom: 8rem;
 }
 
 .home-content h1 {
@@ -88,7 +89,7 @@ section {
 
 .home-content .text-animate {
     position: relative;
-    width: 32.8rem;
+    width: 25rem;
 }
 
 .home-content .text-animate h3 {
@@ -100,15 +101,12 @@ section {
 
 .home-content p {
     font-size: 1.6rem;
-    margin: 2rem 0 4rem;
 }
 
 .home-links {
     position: absolute;
-    bottom: 4rem;
-    width: 120px;
+    bottom: 2rem;
     display: flex;
-    justify-content: space-between;
 }
 
 .home-links a {
@@ -150,11 +148,12 @@ section {
 }
 
 .btn-box {
+    /*
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 32.8rem;
-    height: 5rem;
+    height: 5rem;*/
+    max-width: 32.8rem;
 }
 
 .btn-box .btn {
@@ -162,7 +161,7 @@ section {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 15rem;
+    /*width: 15rem;*/
     height: 100%;
     background-color: transparent; /*var(--main-color);*/
     border: 0.2rem solid var(--main-color);
