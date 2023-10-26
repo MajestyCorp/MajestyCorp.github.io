@@ -89,7 +89,7 @@ section {
 
 .home-content .text-animate {
     position: relative;
-    width: 25rem;
+    /*width: 25rem;*/
 }
 
 .home-content .text-animate h3 {
