@@ -6,6 +6,7 @@ var options1 = {
 var options2 = {
     canvasId: "canvas2",
     glowId: "glow2",
+    hue: 140,
 };
 
 var liner1 = new Liner(options1);

@@ -15,6 +15,7 @@
     --second-bg-color: #112e42;
     --text-color: #ededed;
     --main-color: hwb(197 0% 6%);
+    --main-color2: hwb(140 0% 14%);
 }
 
 html {
@@ -37,10 +38,98 @@ body {
     backdrop-filter: blur(10px);
 }
 
+@media (min-width: 576px) {
+    .fs-sm-1 {
+        font-size: 2.25rem !important
+    }
+
+    .fs-sm-2 {
+        font-size: 1.8rem !important
+    }
+
+    .fs-sm-3 {
+        font-size: 1.575rem !important
+    }
+
+    .fs-sm-4 {
+        font-size: 1.35rem !important
+    }
+
+    .fs-sm-5 {
+        font-size: 1.125rem !important
+    }
+
+    .fs-sm-6 {
+        font-size: .9rem !important
+    }
+
+    .px-sm-8p {
+        padding-left: 8% !important;
+        padding-right: 8% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .fs-md-1 {
+        font-size: 2.25rem !important
+    }
+
+    .fs-md-2 {
+        font-size: 1.8rem !important
+    }
+
+    .fs-md-3 {
+        font-size: 1.575rem !important
+    }
+
+    .fs-md-4 {
+        font-size: 1.35rem !important
+    }
+
+    .fs-md-5 {
+        font-size: 1.125rem !important
+    }
+
+    .fs-md-6 {
+        font-size: .9rem !important
+    }
+}
+
+@media (min-width: 992px) {
+    .fs-lg-1 {
+        font-size: 2.25rem !important
+    }
+
+    .fs-lg-2 {
+        font-size: 1.8rem !important
+    }
+
+    .fs-lg-3 {
+        font-size: 1.575rem !important
+    }
+
+    .fs-lg-4 {
+        font-size: 1.35rem !important
+    }
+
+    .fs-lg-5 {
+        font-size: 1.125rem !important
+    }
+
+    .fs-lg-6 {
+        font-size: .9rem !important
+    }
+}
+
 .header {
     width: 100%;
     padding: 2rem 9%;
     z-index: 100;
+
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .2);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
 }
 
 .text-color {
@@ -66,14 +155,14 @@ body {
 
 section {
     min-height: 100vh;
-    padding-top: 8rem;
+    padding-top: 10rem;
     padding-bottom: 2rem;
+    position: relative;
 }
 
 .home {
     display: flex;
     align-items: center;
-    position: relative;
 }
 
 .home-content {
@@ -175,6 +264,19 @@ section {
     transition: .5s;
 }
 
+.about .btn {
+    border: 0.2rem solid var(--main-color2);
+}
+
+.about .btn-box .btn:hover {
+    color: var(--main-color2);
+}
+
+.about .btn-box .btn::before {
+    background-color: var(--main-color2);
+}
+
+
 .btn-box .btn:nth-child(2) {
     color: var(--main-color);
 }
@@ -209,4 +311,83 @@ section {
 
 .btn-box .btn:hover::before {
     width: 0%;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heading {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.heading span {
+    color: var(--main-color2);
+}
+
+.about-img {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    border: .2rem solid var(--main-color2);
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid transparent;
+    border-bottom: .2rem solid transparent;
+    border-left: .2rem solid var(--main-color2);
+    border-right: .2rem solid var(--main-color2);
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    padding: 2rem 0 3rem;
 }
