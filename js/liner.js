@@ -1,7 +1,7 @@
 const maxWidth = 15;
 const minWidth = 2;
 const maxSpeed = 35;
-const minSpeed = 6;
+const minSpeed = 15;
 const hueDif = 50; // Hue +/-
 const glow = 5;
 

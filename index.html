@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio of Indie Game Developer</title>
+    <title>Mikhail Sabashnyy - Indie Game Developer</title>
+    <link rel="icon" type="image/png" href="images/icon.png" />
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,23 +24,25 @@
 <body>
 
     <!-- HEADER -->
-    <header class="header position-fixed top-0 start-0 d-flex justify-content-between align-items-center">
+    <header class="header fixed-top d-flex justify-content-between align-items-center">
         <a href="#" class="text-color text-decoration-none fs-1 bold">Mikhail.</a>
 
+        <div class="menu fa-solid fa-2xl fa-bars" id="menu-icon"></div>
+
         <nav class="navbar fs-3 ">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">My Projects</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+            <a class="color1 active" href="#home">Home</a>
+            <a class="color2" href="#about">About</a>
+            <a class="color6" href="#games">My Games</a>
+            <a class="color3" href="#experience">Experience</a>
+            <a class="color4" href="#skills">Skills</a>
+            <a class="color5" href="#contacts">Contacts</a>
         </nav>
     </header>
 
     <!-- SECTION HOME -->
     <section class="home px-1 px-sm-8p" id="home">
-        <div class="home-background"></div>
-        <div class="home-img-hover"></div>
+        <div class="home-background d-none d-md-flex"></div>
+        <div class="home-img-hover d-none d-md-flex"></div>
 
         <div class="home-content glass p-5 rounded-5">
             <h1>Hi, I'm <span>Mikhail Sabashnyy</span></h1>
@@ -51,12 +54,12 @@
             </p>
 
             <div class="btn-box row">
-                <a href="#" class="btn col-12 col-sm-5 me-sm-5 mb-3 mb-sm-0">Hire Me</a>
-                <a href="#" class="btn col-12 col-sm-5">Let's Talk</a>
+                <a href="#contacts" class="btn col-12 col-sm-5 me-sm-5 mb-3 mb-sm-0">Hire Me</a>
+                <a href="https://t.me/kennai2" class="btn col-12 col-sm-5">Let's Talk</a>
             </div>
         </div>
         
-        <div class="home-links w-100 justify-content-center justify-content-sm-start gap-5">
+        <div class="links">
             <a href="https://www.facebook.com/profile.php?id=1425975528"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="https://www.linkedin.com/in/mikhail-sabashnyy/"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://t.me/kennai2"><i class="fa-brands fa-telegram"></i></a>
@@ -82,11 +85,11 @@
 
             <div class="about-content">
                 <h3>I enjoy coding!</h3>
-                <p>Proficient in creating immersive and interactive gaming experiences, including single-player campaigns, multiplayer modes, and real-time AI-driven challenges. Experienced in leading development teams, optimizing graphics with shaders, and managing game releases on platforms like <b>Google Play</b> and <b>Steam</b>. Committed to continuous support and enhancement of game features to ensure a captivating and balanced player experience. Ready to bring innovative ideas and technical expertise to your next gaming project.</p>
+                <p>Proficient in creating immersive and interactive gaming experiences, including single-player campaigns, multiplayer modes, and real-time AI-driven challenges. Experienced in leading development team, optimizing graphics with shaders, and managing game releases on platforms like <b>Google Play</b> and <b>Steam</b>. Committed to continuous support and enhancement of game features to ensure a captivating and balanced player experience. Ready to bring innovative ideas and technical expertise to your next gaming project.</p>
             </div>
 
             <div class="btn-box row w-100 justify-content-center">
-                <a href="#" class="btn col-12 col-sm-6">Read More</a>
+                <a href="#experience" class="btn col-12 col-sm-6">Read More</a>
             </div>
         </div>
 
@@ -94,80 +97,371 @@
         <canvas id="canvas2"></canvas>
     </section>
 
-    <!-- SECTION MY PROJECTS -->
-    <section id="projects" class="projects">
+    <!-- SECTION MY GAMES -->
+    <section id="games" class="games">
         
-        <div id="projectCarousel" class="carousel slide position-absolute top-0 left-0">
+        <div id="gamesCarousel" class="carousel slide position-absolute top-0 left-0">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"
+                <button type="button" data-bs-target="#gamesCarousel" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"
+                <button type="button" data-bs-target="#gamesCarousel" data-bs-slide-to="1"
                     aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"
+                <button type="button" data-bs-target="#gamesCarousel" data-bs-slide-to="2"
                     aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
     
                     <div class="fadein">
-                        <img class="fade_img5" src="images/proj1/5.jpg">
-                        <img class="fade_img4" src="images/proj1/4.jpg">
-                        <img class="fade_img3" src="images/proj1/3.jpg">
-                        <img class="fade_img2" src="images/proj1/2.jpg">
-                        <img class="fade_img1" src="images/proj1/1.jpg">
+                        <img class="fade_img5" src="images/games/fix5.jpg">
+                        <img class="fade_img4" src="images/games/fix4.jpg">
+                        <img class="fade_img3" src="images/games/fix3.jpg">
+                        <img class="fade_img2" src="images/games/fix2.jpg">
+                        <img class="fade_img1" src="images/games/fix1.jpg">
                     </div>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                    <div class="fader"></div>
+                    <div class="carousel-caption d-block rounded">
+                        <h3>Please Fix The Building</h3>
+                        <p><b>A relaxing and minimalistic</b> puzzle game where you fix a building using the entire set of blocks. Solve puzzles, explore the world, and take your time. Interactive environment, calm music and sounds of nature will definitely set you up for a relaxing vibe!</p> 
+                        <p><b>Demo</b> is out now.</p>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="fadein">
-                        <img class="fade_img5" src="images/proj2/5.jpg">
-                        <img class="fade_img4" src="images/proj2/4.jpg">
-                        <img class="fade_img3" src="images/proj2/3.jpg">
-                        <img class="fade_img2" src="images/proj2/2.jpg">
-                        <img class="fade_img1" src="images/proj2/1.jpg">
-                    </div>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                    <div class="links">
+                        <a href="https://store.steampowered.com/app/2996860/Please_Fix_The_Building/"><i class="fa-brands fa-steam-symbol"></i></a>
+                        <a class="youtube" href="https://youtu.be/HYgFBWTSWCk"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="fadein">
-                        <img class="fade_img5" src="images/proj2/5.jpg">
-                        <img class="fade_img4" src="images/proj2/4.jpg">
-                        <img class="fade_img3" src="images/proj2/3.jpg">
-                        <img class="fade_img2" src="images/proj2/2.jpg">
-                        <img class="fade_img1" src="images/proj2/1.jpg">
+                        <img class="fade_img5" src="images/games/turret5.jpg">
+                        <img class="fade_img4" src="images/games/turret4.jpg">
+                        <img class="fade_img3" src="images/games/turret3.jpg">
+                        <img class="fade_img2" src="images/games/turret2.jpg">
+                        <img class="fade_img1" src="images/games/turret1.jpg">
                     </div>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                    <div class="fader"></div>
+                    <div class="carousel-caption d-block rounded">
+                        <h3>Space Turret: Defense Point</h3>
+                        <p>In this gripping new campaign, face the might of the Alien Armada. Battle through intense levels filled with advanced alien warships and formidable bosses. Upgrade your turret with cutting-edge technology to match the growing threat. The fate of the galaxy hangs in the balance—defend it with all you've got!</p>
+                        <p>Available 1st and 2nd Campaigns, Multiplayer with co-op missions.</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://play.google.com/store/apps/details?id=com.CrionGames.DefensePoint"><i class="fa-brands fa-google-play"></i></a>
+                        <a class="youtube" href="https://youtu.be/pPgBTWJ32wo"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="stats">
+                        <div>
+                            50K <i class="fa-solid fa-download"></i>
+                        </div>
+                        <div class="d-flex flex-row align-items-end justify-content-center">
+                            <div>4.7</div>
+                            <div class="stars" style="--rating: 4.7;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="fadein">
+                        <img class="fade_img5" src="images/games/runner5.jpg">
+                        <img class="fade_img4" src="images/games/runner4.jpg">
+                        <img class="fade_img3" src="images/games/runner3.jpg">
+                        <img class="fade_img2" src="images/games/runner2.jpg">
+                        <img class="fade_img1" src="images/games/runner1.jpg">
+                    </div>
+                    <div class="fader"></div>
+                    <div class="carousel-caption d-block rounded">
+                        <h3>Space Turret Runner</h3>
+                        <p>Embark on an exhilarating space adventure where you can destroy towering structures, massive buildings, and colossal cruisers. Earn points with each enemy you defeat and use them to unlock new ships that let you venture further into the cosmos. Manage your crew wisely—if it drops to zero, you lose. Strategically increase your crew by unlocking ships that can carry more personnel, expanding your fleet’s capacity and enhancing your survival chances. The endless space awaits your command!</p>
+                    </div>
+                    <div class="links">
+                        <a href="https://play.google.com/store/apps/details?id=com.CrionGames.SpaceTurretRunner"><i class="fa-brands fa-google-play"></i></a>
+                        <a class="youtube" href="https://youtu.be/T2jKUnRFvoQ"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="stats">
+                        <div>
+                            100+ <i class="fa-solid fa-download"></i>
+                        </div>
+                        <div class="d-flex flex-row align-items-end justify-content-center">
+                            <div>4.83</div>
+                            <div class="stars" style="--rating: 4.83;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel"
+            <button class="carousel-control-prev btn-box arrow" type="button" data-bs-target="#gamesCarousel"
                 data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <i class="fa-solid fa-circle-arrow-left"></i>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel"
+            <button class="carousel-control-next btn-box arrow" type="button" data-bs-target="#gamesCarousel"
                 data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <i class="fa-solid fa-circle-arrow-right"></i>
             </button>
         </div>
     
     </section>
 
-    <section id="experience" class="experience">
-        
+    <!-- SECTION EXPERIENCE -->
+    <section id="experience" class="experience px-1 px-md-5">
+        <h2 class="heading">My <span>Experience</span></h2>
+
+        <div class="row flex-column flex-md-row align-items-center align-items-md-start justify-content-center">
+            <div class="col-10 col-md-5">
+                <h3 class="title">Education</h3>
+                <div class="experience-box">
+                    <div class="experience-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-regular fa-calendar-days"></i> 2005 - 2010</div>
+                            <h3>Engineer's degree</h3>
+                            <h3>Belgorod Shukhov State Technology University</h3>
+                            <p>Information Systems and Technologies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-md-6">
+                <h3 class="title">Experience</h3>
+                <div class="experience-box">
+                    <div class="experience-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-regular fa-calendar-days"></i> 2024 - Present</div>
+                            <h3>Game Developer - LogicIne Games (Solo Indie)</h3>
+                            <p>Managing the entire release process, launching the game on Steam, and set up and maintained social media channels for promotion. My work encompassed everything from coding and design to marketing and community engagement, delivering a fun and challenging game for players worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-regular fa-calendar-days"></i> 2023 - Present</div>
+                            <h3>Web Developer - 18 WHEELER CDL DRIVING SCHOOL</h3>
+                            <p>Designed and developed the company's website, creating a user-friendly portal for students. Implemented a robust student testing system, an instructor dashboard for managing lessons, and driving hours tracking system. Additionally, developed a document management system to ensure efficient handling of all records and paperwork.</p>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-regular fa-calendar-days"></i> 2019 - Present</div>
+                            <h3>Lead Unity Developer - Crion Games (Indie Team)</h3>
+                            <p>Spearheaded the design and programming of the entire game, collaborating with an international team. Crafted over 50 unique shaders to enhance visual effects and designed a user-friendly interface. Integrated the Photon Multiplayer plugin for seamless online gameplay and developed an efficient data streaming system to ensure minimal latency. Created two engaging campaigns, implemented complex AI for enemies and turrets, and integrated Google Play payments and Unity Ads for monetization. My comprehensive approach, along with the support of my team, delivered a robust and immersive gaming experience.</p>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-regular fa-calendar-days"></i> 2022 - 2023</div>
+                            <h3>Unity Developer - Voxel Tycoon</h3>
+                            <p>Worked closely with a team to design and refine interfaces, debug and fix issues, and optimize code and shaders. Implemented key features such as multi-output factory support, redesigned factory interfaces, and developed a comprehensive passenger transportation system, and many more. Collaborating with the team, contributed to ensuring a smooth and engaging gameplay experience while enhancing overall performance and functionality.</p>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-regular fa-calendar-days"></i> 2020 - 2022</div>
+                            <h3>SAP RCM Consultant, ABAP Developer - Prikladnie Resheniya</h3>
+                            <p>Was responsible for creating detailed reports and user interfaces, as well as writing technical documentation, user manuals, and technical tasks. Managed the full setup and customization of the RCM module, developed a workspace based on RCM with web services and cross-module integration, and handled integrations with MM, SD, and FI modules. Performed deep debugging and troubleshooting to ensure system reliability and performance.</p>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="content">
+                            <div class="year"><i class="fa-regular fa-calendar-days"></i> 2010 - 2020</div>
+                            <h3>SAP DMS/RCM Consultant, ABAP Developer - Sciener Ltd.</h3>
+                            <p>Focused on creating reports and user interfaces while also writing technical documentation, user manuals, and technical tasks. Handled the setup and customization of DMS and RCM modules and integrated them with MM, SD, and FI modules. Developed web services, approval processes based on case records and workflows, and migration tools for business data. Built custom case components, service providers for RCM, and BAPIs to enhance report performance. My role also involved deep debugging and troubleshooting to ensure optimal system functionality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="glow" id="glow3"></div>
         <canvas id="canvas3"></canvas>
     </section>
+
+    
+    <!-- SECTION SKILLS -->
+     <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+
+        <div class="row flex-column flex-md-row w-100 align-items-center align-items-md-start justify-content-center">
+            <div class="col-10 col-md-4 col-lg-3">
+                <h3 class="title">Coding Skills</h3>
+                <div class="skills-box">
+                    <div class="skills-content">
+                        
+                        <div class="line">
+                            <h3>C# <span>90%</span></h3>
+                            <div class="bar"><span style="width: 90%;"></span></div>
+                        </div>
+                        
+                        <div class="line">
+                            <h3>GitHub <span>90%</span></h3>
+                            <div class="bar"><span style="width: 90%;"></span></div>
+                        </div>
+                        
+                        <div class="line">
+                            <h3>Shaders <span>80%</span></h3>
+                            <div class="bar"><span style="width: 80%;"></span></div>
+                        </div>
+                        
+                        
+
+                        <div class="line">
+                            <h3>HTML <span>80%</span></h3>
+                            <div class="bar"><span style="width: 80%;"></span></div>
+                        </div>
+                        
+                        <div class="line">
+                            <h3>JavaScript <span>70%</span></h3>
+                            <div class="bar"><span style="width: 70%;"></span></div>
+                        </div>
+                        
+                        <div class="line">
+                            <h3>jQuery <span>70%</span></h3>
+                            <div class="bar"><span style="width: 70%;"></span></div>
+                        </div>
+                        
+                        <div class="line">
+                            <h3>AJAX <span>70%</span></h3>
+                            <div class="bar"><span style="width: 70%;"></span></div>
+                        </div>
+
+                        <div class="line">
+                            <h3>PHP <span>60%</span></h3>
+                            <div class="bar"><span style="width: 60%;"></span></div>
+                        </div>
+
+                        <div class="line">
+                            <h3>CSS <span>60%</span></h3>
+                            <div class="bar"><span style="width: 60%;"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-10 col-md-4 col-lg-3">
+                <h3 class="title">Professional Skills</h3>
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="line">
+                            <h3>Unity <span>90%</span></h3>
+                            <div class="bar"><span style="width: 90%;"></span></div>
+                        </div>
+                        <div class="line">
+                            <h3>AI Programming <span>90%</span></h3>
+                            <div class="bar"><span style="width: 90%;"></span></div>
+                        </div>
+                        <div class="line">
+                            <h3>Debugging and Optimization <span>90%</span></h3>
+                            <div class="bar"><span style="width: 90%;"></span></div>
+                        </div>
+                        <div class="line">
+                            <h3>Shader Development <span>80%</span></h3>
+                            <div class="bar"><span style="width: 80%;"></span></div>
+                        </div>
+                        <div class="line">
+                            <h3>UI Design <span>70%</span></h3>
+                            <div class="bar"><span style="width: 70%;"></span></div>
+                        </div>
+                        <div class="line">
+                            <h3>Database Design <span>90%</span></h3>
+                            <div class="bar"><span style="width: 90%;"></span></div>
+                        </div>
+                        <div class="line">
+                            <h3>Web Design <span>80%</span></h3>
+                            <div class="bar"><span style="width: 80%;"></span></div>
+                        </div>
+                        <div class="line">
+                            <h3>Responsive Design <span>70%</span></h3>
+                            <div class="bar"><span style="width: 70%;"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-10 col-md-4 col-lg-3">
+                <h3 class="title">Soft Skills</h3>
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="line">
+                            <h3>Teamwork</h3>
+                        </div>
+                        
+                        <div class="line">
+                            <h3>Communication</h3>
+                        </div>
+                        
+                        <div class="line">
+                            <h3>Сreativity</h3>
+                        </div>
+                        
+                        <div class="line">
+                            <h3>Responsibility</h3>
+                        </div>
+                        
+                        <div class="line">
+                            <h3>Stress resistance</h3>
+                        </div>
+                        
+                        <div class="line">
+                            <h3>Critical thinking</h3>
+                        </div>
+                        
+                        <div class="line">
+                            <h3>Problem-Solving</h3>
+                        </div>
+                        
+                        <div class="line">
+                            <h3>Time Management</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="glow" id="glow4"></div>
+        <canvas id="canvas4"></canvas>
+     </section>
+
+     <section id="contacts" class="contacts">
+        <h2 class="heading"><span>Contacts</span></h2>
+
+        <div class="d-block justify-content-center">
+                <div class="contacts-content row flex-column flex-md-row align-items-start align-self-md-center justify-content-around">
+                    <div class="col-10 col-md-4 col-lg-3">
+                        <div class="content">
+                            <ul class="fa-ul">
+                                <li>
+                                    <span class="fa-li"><i class="fa-solid fa-lg fa-envelope"></i></span>
+                                    <a href="mailto: mail.mikecs@gmail.com" class="link-light">Send me email</a>
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fa-brands fa-lg fa-telegram"></i></span>
+                                    <a href="https://t.me/kennai2" class="link-light">@Kennai2</a>
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fa-brands fa-lg fa-discord"></i></span>
+                                    <a href="https://t.me/kennai2" class="link-light">@DarkMajesty</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-4 col-lg-3">
+                        <div class="content">
+                            <ul class="fa-ul">
+                                <li>
+                                    <span class="fa-li"><i class="fa-brands fa-lg fa-facebook"></i></span>
+                                    <a href="https://www.facebook.com/profile.php?id=1425975528" class="link-light">Me on Facebook</a>
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fa-brands fa-lg fa-linkedin"></i></span>
+                                    <a href="https://www.linkedin.com/in/mikhail-sabashnyy/" class="link-light">Me on LinkedIn</a>
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fa-brands fa-github"></i></span>
+                                    <a href="https://github.com/MajestyCorp" class="link-light">Me on GitHub</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+        <div class="glow" id="glow5"></div>
+        <canvas id="canvas5"></canvas>
+     </section>
 </body>
 
 <script src="js/liner.js"></script>
